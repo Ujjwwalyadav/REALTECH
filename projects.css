@@ -1,0 +1,114 @@
+body {
+    background-color: #5d5e60; /* Light grayish background */
+    margin: 0;
+    font-family: Arial, sans-serif,bold;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 50px;
+    
+
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #333;
+    
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;  /* Smaller font size for mobile */
+    }
+
+    .container {
+        width: 100%;  /* Full-width container on small screens */
+        padding: 10px;
+    }
+
+    /* Add other mobile-specific styles here */
+}
+
+.projects h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #3498db;
+    position: center;
+}
+
+.projects p {
+    font-size: 18px;
+    color: black;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project {
+    flex: 1 1 calc(33.333% - 20px); /* 3 items per row with 20px gap */
+    max-width: calc(33.333% - 20px);
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project img {
+    width: 90%;
+    height: 70%;
+    object-fit: cover;
+    border-bottom: 3px solid #3498db;
+}
+
+.project h3 {
+    font-size: 20px;
+    margin: 15px 0 10px;
+    color: #3498db;
+}
+
+.project p {
+    font-size: 14px;
+    color: #555;
+    padding: 0 15px 20px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project {
+        flex: 1 1 calc(50% - 20px); /* 2 items per row on tablets */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        flex: 1 1 100%; /* 1 item per row on small screens */
+        max-width: 100%;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
